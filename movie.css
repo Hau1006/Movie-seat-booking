@@ -1,7 +1,7 @@
 /* Variable */
 
 :root {
-    --textColor:#6feaf6;
+    --textColor: #6feaf6;
     --mainBackground: hsl(243, 18, 16);
     --mainColor: white;
     --mainSpacing: 0.3rem;
@@ -49,6 +49,7 @@ ul {
 a {
     text-decoration: none;
 }
+
 /* 
 img {
     width: 100%;
@@ -60,84 +61,99 @@ img {
 .movie-select {
     margin: 1rem 0;
 }
+.movie-select label { 
+    text-transform: capitalize;
+}
 
 .movie-select select {
     background-color: #fff;
-    border: 0;
+    border: none;
     border-radius: var(--mainBoderRadius);
     font-size: 1rem;
     margin-left: 1rem;
     padding: 0.3rem 1rem;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
+/* dinh dang cho cac thanh phan trong 
+giong giao dien nguoi dung */
+    /* -moz-appearance: none firefox; 
+    -webkit-appearance: none chrome and safari;
+    appearance: none; */
 }
-.container { 
-    perspective: 1000px; 
+
+.container {
+    /* the hien chieu sau */
+    perspective: 500px;
     margin-bottom: 2rem;
 }
-.seat { 
-    background-color:#444451 ;
+
+.seat {
+    background-color: #444451;
     height: 0.75rem;
     width: 1rem;
     margin: 0.25rem;
     border-top-left-radius: var(--mainBoderRadius);
     border-top-right-radius: var(--mainBoderRadius);
-
 }
-.seat.selected { 
+
+.seat.selected {
     background-color: #6feaf6;
 }
+
 .seat.occupied {
     background-color: #fff;
 }
-.seat:nth-of-type(2){
+/* chon 2 hang dau cach ra  */
+.seat:nth-of-type(2) {
     margin-right: 1.25rem;
-
 }
+/* chon hai hang sau cach ra  */
 .seat:nth-last-of-type(2) {
     margin-left: 1.25rem;
-  }
-  .seat:not(.occupied):hover {
+}
+/* .not là bộ chọn , chọn tất cả ngoại trừ trong ngoặc  */
+.seat:not(.occupied):hover {
     cursor: pointer;
-    transform: scale(1.2);
-  }
-  
+    transform: scale(1.5);
+}
+
 .showcase .seat:not(.occupied):hover {
     cursor: default;
-    transform: scale(1);
-  }
+    transform: scale(1.6);
+}
 
-  .showcase { 
-      margin-bottom: 1rem;
-      background-color: rgba(0, 0, 0, 0.1);
-      padding: 5px 10px;
-      border-radius: var(--mainBoderRadius);
-      color: #777;
-      display: flex;
-      justify-content: space-between;
-  }
-  .showcase li { 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 1rem;
-  }
-  .showcase li small { 
-      margin-left: 1rem;
-  }
+.showcase {
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--mainBoderRadius);
+    color: #777;
+    display: flex;
+    justify-content: space-around;
+}
 
-  .row { 
-      display: flex;
-  }
-  .screen { 
-      background-color: #fff;
-      height: 4.5rem;
-      width: 100%;
-      margin: 1rem 0;
-      transform: rotateX(-45deg);
-      box-shadow: var(--boxShadow);
-  }
-  p.text span  { 
-      color: var(--textColor);
-  }
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.showcase li small {
+    margin-left: 1rem;
+}
+
+.row {
+    display: flex;
+}
+
+.screen {
+    background-color: #fff;
+    height: 4.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    transform: rotateX(-45deg);
+    box-shadow: var(--boxShadow);
+}
+
+p.text span {
+    color: var(--textColor);
+}
